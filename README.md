@@ -8,19 +8,19 @@ Gilter8 templates generator.
 ## Build the Image
 
 ```sh
-sudo docker build -t <image-name> .
+sudo docker build --build-arg HOST_UID=$(id -u) --tag wilberquito/docker-sbt-it .  --no-cache
 ```
 
 ## Run a Container Using the Built Image
 
 ```sh
-sudo docker run -it <image-name>
+sudo docker run -it wilberquito/docker-sbt-it
 ```
 
 ## Track Progress Inside the Projects Folder
 
 ```sh
-sudo docker run -v ./projects:/scala/projects -it <image-name>
+sudo docker run -v ./projects:/home/nonroot/scala/projects -it wilberquito/docker-sbt-it
 ```
 
 ## A Simple Build Tool
