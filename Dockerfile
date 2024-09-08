@@ -14,8 +14,8 @@ RUN chmod +x /entrypoint.sh
 # Set working directory
 WORKDIR /scala
 
-# Create a dummy sbt project using g8 template scala generator
-RUN sbt new scala/scala-seed.g8 --name=hello-world
+# Copy scala projects into working dir
+COPY . .
 
 # Use bash as the entry point
 CMD ["/entrypoint.sh"]
