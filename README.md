@@ -38,7 +38,7 @@ sbt
 sbt console
 ```
 
-# Create a dummy sbt project using g8 template scala generator
+## Create a dummy sbt project using g8 template scala generator
 
 ```sh
 cd projects/
