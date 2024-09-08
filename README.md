@@ -17,10 +17,32 @@ sudo docker build -t <image-name> .
 sudo docker run -it <image-name>
 ```
 
+## Track Progress Inside the Projects Folder
+
+```sh
+sudo docker run -v ./projects:/scala/projects -it <image-name>
+```
+
+## A Simple Build Tool
+
+If you want to interact with sbt and explore its full set of instructions, just
+call it in the terminal.
+
+```sh
+sbt
+```
+
 ## Scala Interactive Console
 
 ```sh
 sbt console
+```
+
+# Create a dummy sbt project using g8 template scala generator
+
+```sh
+cd projects/
+sbt new scala/scala-seed.g8 --name=hello-world
 ```
 
 ## Build the Hello World sbt Project
@@ -31,15 +53,6 @@ downloaded and the project will be compiled.
 ```sh
 cd hello-world/
 sbt run
-```
-
-## A Simple Build Tool
-
-If you want to interact with sbt and explore its full set of instructions, just
-call it in the terminal.
-
-```sh
-sbt
 ```
 
 ## If container dies...
