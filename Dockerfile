@@ -4,6 +4,11 @@ FROM sbtscala/scala-sbt:eclipse-temurin-17.0.4_1.7.1_3.2.0
 # Arguments definition
 ARG HOST_UID
 
+# Just a little bit of spam in the image metadata
+LABEL maintainer.name="Wilber E. Bermeo Quito" \
+      maintainer.github="wilberquito" \
+      maintainer.mail="typingwil@gmail.com"
+
 # Install usuful tools
 RUN apt update && \
   apt install -y sudo && \
